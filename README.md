@@ -1,6 +1,4 @@
 
-MDCLONE:
-
 How to run:
 
 1. Backend( NodeJS )
