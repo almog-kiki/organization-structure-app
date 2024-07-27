@@ -11,11 +11,13 @@ How to run:
 	6. npm start
 
     	 The data in the db represents this hierarchy:
-    		Manager_1_name
+    	```
+     		Manager_1_name
     		/             \
-	Employee_4_name	   Manager_2_name
-				\
-    				Employee_3_name
+     	 Employee_4_name   Manager_2_name
+					\
+    			    Employee_3_name
+   
 3. Frontend( Angular ):
    
 	1. npm install
