@@ -1,0 +1,43 @@
+<div *ngIf="!isManager" class="component-container">  
+  <div class="card">
+      <div class="card-header font-weight-bold text-uppercase py-2 table-title">
+          <span class="text-center">
+             My Employees: (Assign Task)
+          </span>
+      </div>
+
+      <div *ngIf="isLoading" class="loader" >
+          <div class="spinner-border" role="status"></div>
+      </div>
+      <div *ngIf="!isLoading" class="card-body">
+       <div id="table" class="table-responsive">
+          <table class="table table-striped fa-check text-successtable-border border-light">
+          <thead class="border-light">
+            <tr>
+              <th class="text-center">FirstName</th>
+              <th class="text-center">Last Name</th>
+              <th class="text-center">Position</th>
+              <th class="text-center">Assing To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of employees">
+              <td>
+                <span>{{employee.firstName}}</span>
+              </td>
+                <td>
+                <span>{{employee.lastName}}</span>
+              </td>
+                 <td>
+                <span>{{employee.position}}</span>
+              </td>
+                <td>
+                   <button (click)="assignTask(employee.id)">Assign</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>

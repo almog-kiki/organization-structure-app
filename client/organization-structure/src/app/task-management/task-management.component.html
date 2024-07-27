@@ -1,0 +1,39 @@
+<div class="component-container">
+  <div class="card">
+      <div class="card-header font-weight-bold text-uppercase py-2 table-title">
+          <span class="text-center">
+             My Tasks:
+          </span>
+      </div>
+
+      <div *ngIf="isLoading" class="loader" >
+          <div class="spinner-border" role="status"></div>
+      </div>
+      <div *ngIf="!isLoading" class="card-body">
+        <div id="table" class="table-responsive">
+          <table class="table table-striped fa-check text-successtable-border border-light">
+          <thead class="border-light">
+            <tr>
+              <th class="text-center">Task</th>
+              <th class="text-center">Assign Date</th>
+              <th class="text-center">Due Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let task of tasks; let id as index">
+              <td>
+                <span>{{task.taskText}}</span>
+              </td>
+                <td>
+                <span>{{task.assignDate}}</span>
+              </td>
+                 <td>
+                <span>{{task.dueDate}}</span>
+              </td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>

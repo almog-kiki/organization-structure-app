@@ -1,0 +1,11 @@
+<div class="component-container">
+	<div *ngIf="isUserExists" class="dashboard">
+		<h2 class="first-name">Hello {{user.firstName}}</h2>
+		<app-task-assignment *ngIf="isManager"></app-task-assignment>
+		<app-task-management></app-task-management>
+		<app-report-management></app-report-management>
+	</div>
+	<div *ngIf="!isUserExists">
+		<span>Not found user</span>
+	</div>
+</div>

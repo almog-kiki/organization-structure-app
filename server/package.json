@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "name": "organization structure app",
+  "author": "Almog Kal",
+  "description": "",
+  "scripts": {
+    "start": "export NODE_ENV=development && nodemon start.js",
+    "test": "jest --forceExit",
+    "migrate": "cd src && sequelize db:migrate --debug",
+    "create-db": "cd src && sequelize db:create",
+    "seed": "cd src && sequelize db:seed:all"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.10.3",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2"
+  }
+}
